@@ -1,6 +1,6 @@
 # source: https://hub.docker.com/r/dockerniko/gitlab-ci-react-native-android/~/dockerfile/
 # Pull base image. 
-FROM ubuntu:14.04 
+FROM ubuntu:18.04 
 
 # Install base software packages 
 RUN apt-get update && \
@@ -87,7 +87,7 @@ ENV PATH $PATH:$GRADLE_HOME/bin
 # Install Node and global packages 
 # —————————— 
 
-ENV NODE_VERSION 10.16.0
+ENV NODE_VERSION 10.17.0
 RUN cd && \
     wget -q http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz && \
     tar -xzf node-v${NODE_VERSION}-linux-x64.tar.gz && \
